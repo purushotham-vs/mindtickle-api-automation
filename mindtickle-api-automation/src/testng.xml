@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MySuite">
+    <test name="MyTest">
+        <classes>
+            <class name="org.petstore.users.CreateUsersTest"/>
+        </classes>
+    </test>
+</suite>
