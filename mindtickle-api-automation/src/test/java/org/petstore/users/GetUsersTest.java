@@ -24,7 +24,7 @@ public class GetUsersTest {
     public void getUsers() throws FileNotFoundException {
         JSONArray usersArray = new JSONArray();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("/Users/puru/Documents/Mindtickle/mindtickle-api-automation/src/main/java/org/petstore/testData/users-data.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("/Users/puru/Documents/mindtickle-assignment/mindtickle-api-automation/src/main/java/org/petstore/testData/updated-users-data.csv"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] userData = line.split(",");

@@ -3,6 +3,8 @@
     <test name="MyTest">
         <classes>
             <class name="org.petstore.users.CreateUsersTest"/>
+            <class name="org.petstore.users.UpdateUsersTest"/>
+            <class name="org.petstore.users.GetUsersTest"/>
         </classes>
     </test>
 </suite>
