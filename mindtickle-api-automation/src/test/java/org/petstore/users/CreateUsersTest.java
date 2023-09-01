@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class CreateUsersTest {
 
-    @Test
+    @Test(priority = 0, groups = "Users")
     public void createMultipleUsers() {
         JSONArray usersArray = new JSONArray();
 

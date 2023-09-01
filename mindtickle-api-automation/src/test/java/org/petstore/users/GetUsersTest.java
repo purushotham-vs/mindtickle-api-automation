@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class GetUsersTest {
 
-    @Test
+    @Test(priority = 2, groups = "Users")
     public void getUsers() throws FileNotFoundException {
         JSONArray usersArray = new JSONArray();
 

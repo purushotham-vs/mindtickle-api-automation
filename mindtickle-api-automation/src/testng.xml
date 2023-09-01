@@ -1,10 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MySuite">
-    <test name="MyTest">
+    <test name="PetstoreTests">
+        <groups>
+            <run>
+                <include name="Pets" />
+                <include name="Users" />
+            </run>
+        </groups>
         <classes>
             <class name="org.petstore.users.CreateUsersTest"/>
             <class name="org.petstore.users.UpdateUsersTest"/>
             <class name="org.petstore.users.GetUsersTest"/>
+            <class name="org.petstore.pets.CreateMultiplePetsTest"/>
+            <class name="org.petstore.pets.UpdatePetsTest"/>
+            <class name="org.petstore.pets.GetPetsByStatusTest"/>
+
         </classes>
     </test>
 </suite>

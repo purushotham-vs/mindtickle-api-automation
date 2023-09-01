@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UpdateUsersTest {
 
-    @Test
+    @Test(priority = 1, groups = "Users")
     public void updateUsers() {
         JSONArray usersArray = new JSONArray();
 
