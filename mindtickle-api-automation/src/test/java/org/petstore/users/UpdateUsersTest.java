@@ -5,6 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.petstore.helpers.config.EndPoint;
+import org.petstore.helpers.enums.HTTPStatusCode;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
@@ -50,9 +52,9 @@ public class UpdateUsersTest {
                         .contentType(ContentType.JSON)
                         .body(requestBody)
                         .when()
-                        .put("https://petstore.swagger.io/v2/user/{usernameToUpdate}")
+                        .put(EndPoint.USER+"/{usernameToUpdate}")
                         .then()
-                        .statusCode(200)
+                        .statusCode(HTTPStatusCode.OK)
                         .body("code", equalTo(200))
                         .body("type", equalTo("unknown"))
                         .contentType(ContentType.JSON)

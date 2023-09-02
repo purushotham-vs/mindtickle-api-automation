@@ -4,6 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.petstore.helpers.config.EndPoint;
+import org.petstore.helpers.enums.HTTPStatusCode;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
@@ -52,9 +54,9 @@ public class CreateUsersTest {
                 .contentType(ContentType.JSON)
                 .body(usersArray.toString())
                 .when()
-                .post("https://petstore.swagger.io/v2/user/createWithArray")
+                .post(EndPoint.CREATEWITHARRAY)
                 .then()
-                .statusCode(200)
+                .statusCode(HTTPStatusCode.OK)
                 .body("message", equalTo("ok"))
                 .body("code", equalTo(200))
                 .body("type", equalTo("unknown"));

@@ -5,6 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.petstore.helpers.config.EndPoint;
+import org.petstore.helpers.enums.HTTPStatusCode;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
@@ -41,9 +43,9 @@ public class GetUsersTest {
                 Response response = RestAssured.given()
                         .pathParam("username", username)
                         .when()
-                        .get("https://petstore.swagger.io/v2/user/{username}")
+                        .get(EndPoint.USER+"/{username}")
                         .then()
-                        .statusCode(200)
+                        .statusCode(HTTPStatusCode.OK)
                         .contentType(ContentType.JSON)
                         .extract()
                         .response();
