@@ -14,7 +14,6 @@
             <class name="org.petstore.pets.CreateMultiplePetsTest"/>
             <class name="org.petstore.pets.UpdatePetsTest"/>
             <class name="org.petstore.pets.GetPetsByStatusTest"/>
-
         </classes>
     </test>
 </suite>
